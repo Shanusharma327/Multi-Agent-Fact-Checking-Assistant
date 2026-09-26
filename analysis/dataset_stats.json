@@ -1,0 +1,253 @@
+{
+  "fever": {
+    "total": 19998,
+    "label_counts": {
+      "SUPPORTS": 6666,
+      "REFUTES": 6666,
+      "NOT_ENOUGH_INFO": 6666
+    },
+    "label_pct": {
+      "SUPPORTS": 33.333333333333336,
+      "REFUTES": 33.333333333333336,
+      "NOT_ENOUGH_INFO": 33.333333333333336
+    },
+    "claim_words": {
+      "mean": 8.333983398339834,
+      "median": 8.0,
+      "stdev": 3.1534283970291654,
+      "min": 2,
+      "max": 36
+    },
+    "claim_chars": {
+      "mean": 48.94464446444645,
+      "median": 46.0,
+      "stdev": 19.054949361796403,
+      "min": 13,
+      "max": 219
+    },
+    "words_by_label": {
+      "SUPPORTS": {
+        "mean": 8.266876687668766,
+        "median": 8.0,
+        "stdev": 3.2438690208635186,
+        "min": 2,
+        "max": 31
+      },
+      "REFUTES": {
+        "mean": 8.32058205820582,
+        "median": 8.0,
+        "stdev": 2.8858136137428296,
+        "min": 3,
+        "max": 31
+      },
+      "NOT_ENOUGH_INFO": {
+        "mean": 8.414491449144915,
+        "median": 8.0,
+        "stdev": 3.312183732073055,
+        "min": 2,
+        "max": 36
+      }
+    },
+    "verifiable": {
+      "NOT VERIFIABLE": 6666,
+      "VERIFIABLE": 13332
+    },
+    "gold_pages_by_label": {
+      "SUPPORTS": {
+        "mean": 1.2142214221422143,
+        "max": 16,
+        "zero_pct": 0.0
+      },
+      "REFUTES": {
+        "mean": 1.1884188418841883,
+        "max": 15,
+        "zero_pct": 0.0
+      },
+      "NOT_ENOUGH_INFO": {
+        "mean": 0,
+        "max": 0,
+        "zero_pct": 100.0
+      }
+    },
+    "gold_pages_overall_mean": 0.8008800880088008
+  },
+  "averitec": {
+    "total": 462,
+    "label_counts": {
+      "SUPPORTS": 122,
+      "REFUTES": 305,
+      "NOT_ENOUGH_INFO": 35
+    },
+    "label_pct": {
+      "SUPPORTS": 26.406926406926406,
+      "REFUTES": 66.01731601731602,
+      "NOT_ENOUGH_INFO": 7.575757575757576
+    },
+    "claim_words": {
+      "mean": 17.145021645021647,
+      "median": 15.5,
+      "stdev": 7.666377307232374,
+      "min": 3,
+      "max": 53
+    },
+    "claim_chars": {
+      "mean": 104.2943722943723,
+      "median": 95.0,
+      "stdev": 46.88837175204921,
+      "min": 19,
+      "max": 310
+    },
+    "words_by_label": {
+      "SUPPORTS": {
+        "mean": 16.114754098360656,
+        "median": 14.0,
+        "stdev": 7.697345424162583,
+        "min": 6,
+        "max": 49
+      },
+      "REFUTES": {
+        "mean": 17.524590163934427,
+        "median": 16,
+        "stdev": 7.518734104684939,
+        "min": 3,
+        "max": 47
+      },
+      "NOT_ENOUGH_INFO": {
+        "mean": 17.428571428571427,
+        "median": 17,
+        "stdev": 8.462642999123396,
+        "min": 6,
+        "max": 53
+      }
+    },
+    "load_report": {
+      "total": 500,
+      "kept": 462,
+      "conflicting": 38,
+      "unusable": 0
+    },
+    "claim_types": {
+      "Event/Property Claim": 284,
+      "Numerical Claim": 113,
+      "Quote Verification": 60,
+      "Causal Claim": 48,
+      "Position Statement": 26
+    },
+    "reporting_sources": {
+      "Facebook": 151,
+      "Twitter": 62,
+      "Instagram": 14,
+      "Republican National Convention": 9,
+      "Channels Television": 7,
+      "Independence Anniversary Speech": 6,
+      "Youtube": 5,
+      "ChannelsTV": 5,
+      "Sudarshan News": 5,
+      "US televised debate on Reuters": 4,
+      "twitter": 4,
+      "Channels TV": 4,
+      "CNN": 4,
+      "facebook": 3,
+      "Social Media": 3,
+      "US televised debate on Reuters.": 3,
+      "Rev": 3,
+      "The Federalist": 2,
+      "New York Post": 2,
+      "Facebook user posts": 2,
+      "Twitter ": 2,
+      "Fox News": 2,
+      "WhatsApp": 2,
+      "Tv election debate on 'Channels Television'": 2,
+      "Facebook ": 2,
+      "Syrian state media outlet": 1,
+      "Twitter/Latest laws": 1,
+      "One America News Network,": 1,
+      "Vikaspedia": 1,
+      "The Sun ": 1,
+      "WISN-TV\u2019s \"UpFront\" episode": 1,
+      "4chan": 1,
+      "Daily Mail": 1,
+      "Final Presedential Debate": 1,
+      "Facebook post": 1,
+      "USA TODAY": 1,
+      " NY-27 debate ": 1,
+      "Natural News": 1,
+      "Zee news, DNA, Times now and First post": 1,
+      "Facebook User posts": 1,
+      "Journal of the American Medical Association (JAMA)": 1,
+      "Washington Examiner": 1,
+      "The Geller Report": 1,
+      "WhatsApp viral message and social media": 1,
+      "Facebook user post": 1,
+      "facebook user post": 1,
+      "Blog": 1,
+      "Apple": 1,
+      "Authority Newspaper": 1,
+      "Campaign ad": 1,
+      "KCRG": 1,
+      "Sahel Standard": 1,
+      "Debate with Sen.Kamala D.Harris": 1,
+      "Tweeter": 1,
+      "Radio Canada": 1,
+      "Russian Foreign Ministry": 1,
+      "Sky News": 1,
+      "West African Reporters": 1,
+      "Facebook, Twitter": 1,
+      "facebook, twitter": 1,
+      "Media Matters": 1,
+      "South Africa\u2019s Mail & Guardian": 1,
+      "Lifesite.com": 1,
+      "Granma": 1,
+      "Newshub Leaders Debate ": 1,
+      "speech during Newshub Leaders Debate": 1,
+      "Slate": 1,
+      "FACEBOOK": 1,
+      "NBC NEWS": 1,
+      "Public forum": 1,
+      "Facebook and whatapp": 1,
+      "Republic World": 1,
+      "Facebook Users Posts": 1,
+      " Hub Pages": 1,
+      "U.S. State Department": 1,
+      "instagram": 1,
+      "facebook User Post.": 1,
+      "Press Release": 1,
+      "CBC News": 1,
+      "transmitted via Facebook and Zoom, University of Ibadan, Nigeria's UI Community Forum's Voice of Next Vice-Chancellor 2020": 1,
+      "Debbie Mucarsel-Powell media centre": 1,
+      "Twitter - Times Now": 1,
+      "TorontoToday.net": 1,
+      "Toronto today": 1,
+      "tvanouvelles": 1,
+      "Times Now": 1,
+      " Facebook ": 1,
+      "Hansard": 1,
+      "ABP News, Times of India, Hindustan Times, Sakaal Times, Amar Ujala, Pinkvilla": 1,
+      "Global News": 1,
+      "Labor Day press conference": 1,
+      "Malcolm Kendrick": 1,
+      "Gateway Pundit ": 1,
+      "Tiktok": 1,
+      "Press": 1,
+      "Instagram ": 1,
+      "youtube": 1
+    },
+    "claim_years": {
+      "2020": 462
+    },
+    "questions_per_claim": {
+      "mean": 2.5303030303030303,
+      "median": 2.0,
+      "stdev": 1.5395758661289072,
+      "min": 1,
+      "max": 12
+    },
+    "answers_per_claim": {
+      "mean": 2.738095238095238,
+      "median": 2.0,
+      "stdev": 1.7894045563411256,
+      "min": 1,
+      "max": 16
+    }
+  }
+}
