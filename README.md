@@ -1,17 +1,5 @@
 # MAFCA — A Multi-Agent Fact-Checking Assistant
 
-Machine Learning IA 2 · Department of Computer Engineering
-K. J. Somaiya School of Engineering, Somaiya Vidyavihar University
-
-**Group members**
-
-| Name |
-|---|
-| Shanu Sharma |
-| Krutika Sadadekar |
-
----
-
 ## 1. Problem statement
 
 A single large language model asked both to **find evidence** and to
