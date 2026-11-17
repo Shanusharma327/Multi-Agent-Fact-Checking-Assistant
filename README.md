@@ -106,6 +106,19 @@ This replays the committed cache and per-claim verdicts and rebuilds
 and touches no network. Expect 13 figures, 8 tables and 3 macro files.
 Console output from a real run is in [logs/regenerate.log](logs/regenerate.log).
 
+### Rebuild the results report
+
+    python src/analysis/build_results_doc.py
+
+Writes [results/MAFCA_Results.pdf](results/MAFCA_Results.pdf) and
+[results/MAFCA_Results.docx](results/MAFCA_Results.docx): 16 pages holding
+every plot, every table, the real numeric values and the actual console
+output, each with a caption naming the script that produced it. Both
+documents are assembled from `results/macros/` by the same table
+specification, so they cannot disagree with each other or with the run,
+and a macro name that no longer exists raises rather than printing a
+blank cell.
+
 ### Run the tests
 
     python -m pytest -q
