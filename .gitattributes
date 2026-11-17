@@ -1,0 +1,15 @@
+# Normalise line endings so a clone behaves the same on Windows, macOS
+# and Linux. Text is stored as LF in the repository; Git converts on
+# checkout where the platform wants CRLF.
+* text=auto
+
+# Data and result files are read byte-for-byte by the analysis scripts
+# and are compared against committed output, so they must not be
+# rewritten on checkout.
+*.jsonl  -text
+*.json   -text
+*.csv    -text
+
+# Binary
+*.png    binary
+*.ipynb  -text
