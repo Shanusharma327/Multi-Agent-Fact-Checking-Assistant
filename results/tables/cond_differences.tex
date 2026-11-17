@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Paired accuracy differences against B1, the single-call RAG baseline, by exact McNemar with Holm correction across the family. A confidence interval spanning zero means no difference was demonstrated.}
+\label{tab:cond:diff}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Condition $-$ B1 & Difference (pp) & $p$ & $p$ (Holm) & CI spans 0 \\
+\midrule
+B0: single-LLM, no retrieval & -2.2 [-13.3, 8.9] & 0.845 & 1.000 & yes \\
+MAFCA (computed verdict) & 4.4 [-4.4, 13.3] & 0.481 & 1.000 & yes \\
+MAFCA (agent-reported) & 3.3 [-5.6, 11.1] & 0.607 & 1.000 & yes \\
+Majority class & -4.4 [-21.1, 12.2] & 0.689 & 1.000 & yes \\
+Uniform random & -15.6 [-30.0, -1.1] & 0.049 & 0.244 & no \\
+\bottomrule
+\end{tabular}
+\end{table*}

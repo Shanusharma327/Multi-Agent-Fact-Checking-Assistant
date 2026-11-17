@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{The primary comparison on AVeriTeC ($n = 90$): the three-agent pipeline against a single LLM given the same claim and no retrieval. \textbf{Gain is the primary configuration --- MAFCA (computed) --- over the single LLM} on every row, with its 95\% bootstrap interval; the agent-reported column is an ablation in which the adjudicator is asked for the verdict instead of it being computed from the audit. The pipeline is ahead on every classification measure; no classification interval excludes zero at this sample size, so these are point estimates and not demonstrated differences. The citation row is a property of the architecture rather than a statistical estimate: a system that retrieves nothing cannot cite anything. The primary configuration gates citations against the audit, which is why its rate is below the ungated ablation's; Section~\ref{sec:ablation} gives that trade-off.}
+\label{tab:cond:headline}
+\small
+\begin{tabular}{@{}lrrrrc@{}}
+\toprule
+Metric & Single LLM & \shortstack{MAFCA\\(computed, primary)} & \shortstack{MAFCA\\(agent-reported, ablation)} & Gain & 95\% CI \\
+\midrule
+Accuracy (\%) & 42.2 & \textbf{48.9} & 47.8 & $\mathbf{+6.7}$ & [-5.6, 18.9] \\
+Macro-F1 (\%) & 39.8 & \textbf{47.4} & 45.2 & $\mathbf{+7.6}$ & [-6.1, 21.8] \\
+Decidable accuracy (\%) & 24.6 & \textbf{34.4} & 29.5 & $\mathbf{+9.8}$ & [-5.0, 25.5] \\
+Verdicts carrying a citation (\%) & 0.0 & \textbf{38.9} & 66.7 & $\mathbf{+38.9}$ & by construction \\
+\bottomrule
+\end{tabular}
+\end{table*}

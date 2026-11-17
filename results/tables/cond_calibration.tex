@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Calibration. Lower is better throughout. The trivial baselines score well by reporting the uninformative prior and being right about as often, which is why calibration is never read as a quality measure on its own.}
+\label{tab:cond:calib}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Condition & ECE (10 bins) & ECE (15 bins) & Brier \\
+\midrule
+Majority class & 0.067 [0.000, 0.167] & 0.067 [0.000, 0.167] & 0.244 [0.211, 0.278] \\
+Uniform random & 0.044 [0.000, 0.133] & 0.044 [0.000, 0.133] & 0.207 [0.178, 0.241] \\
+B0: single-LLM, no retrieval & 0.192 [0.092, 0.291] & 0.192 [0.096, 0.293] & 0.273 [0.229, 0.321] \\
+B1: single-call RAG & 0.272 [0.175, 0.377] & 0.272 [0.176, 0.377] & 0.343 [0.273, 0.415] \\
+MAFCA (agent-reported) & 0.376 [0.273, 0.477] & 0.376 [0.273, 0.477] & 0.390 [0.301, 0.477] \\
+MAFCA (computed verdict) & 0.280 [0.204, 0.390] & 0.288 [0.210, 0.395] & 0.320 [0.273, 0.366] \\
+\bottomrule
+\end{tabular}
+\end{table*}

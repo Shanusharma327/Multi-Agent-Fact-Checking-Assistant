@@ -1,0 +1,17 @@
+[theme]
+base = "dark"
+primaryColor = "#6C8EF5"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#171B26"
+textColor = "#E6E8EF"
+
+[server]
+runOnSave = true
+
+[client]
+# Hides the "Deploy" button and the three-dot main menu in the top-right
+# toolbar. "auto" (the default) shows developer options when running locally.
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

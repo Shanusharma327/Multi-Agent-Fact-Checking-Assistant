@@ -1,0 +1,77 @@
+wrote 90 paired records to D:\proj\submission\results\averitec_n90_v2.jsonl
+  baseline = B0, multi = MAFCA
+  labels: NOT_ENOUGH_INFO 29, REFUTES 25, SUPPORTS 36
+n = 90 claims from D:\proj\submission\results\averitec_n90_v2.jsonl
+
+  Single-LLM (existing)      acc  42.2%  macro-F1  39.8%  decidable  24.6%  latency   6.1s
+  MAFCA computed (proposed)  acc  48.9%  macro-F1  47.4%  decidable  34.4%  latency  20.6s
+  MAFCA agent-reported (ablation) acc  47.8%  macro-F1  45.2%  decidable  29.5%  latency  20.6s
+
+Tables -> results\tables\av_tables.tex
+Charts -> results\figures/av_*.png
+  retrieval    results\figures/av_retrieval.png
+  reliability  results\figures/av_reliability.png
+  ablation     results\figures/av_ablation.png
+
+Aggregation ablation  ·  D:\proj\submission\results\averitec_n90_v2.jsonl  ·  n = 90
+policy                                      acc    mF1     ECE   Brier  overconf   cited  support
+-------------------------------------------------------------------------------------------------
+Single-LLM baseline                        42.2   39.8   0.192   0.273     +19.2     0.0      0.0
+MAFCA, as run                              47.8   45.2   0.376   0.390      -2.4    66.7     72.7
+  + deterministic agg. (beta=0)            48.9   47.4   0.268   0.306      +5.3    38.9    100.0
+  + deterministic agg. (beta=1)            48.9   47.4   0.280   0.320      +8.6    38.9    100.0
+  + deterministic agg. (beta=2)            48.9   47.4   0.289   0.331     +10.5    38.9    100.0
+  + det. agg., gating off                  48.9   47.4   0.280   0.320      +8.6    66.7     67.2
+
+Table -> results\tables\av_ablation.tex
+Wrote fig_flowchart.png, fig_summary_bar.png and fig_network.png to results\figures/
+wrote 239 macros -> D:\proj\submission\results\macros\numbers.tex
+  Av: D:\proj\submission\results\averitec_n90_v2.jsonl (90 records)
+n = 90 claims, conditions: MAJORITY, RANDOM, B0, B1, MAFCA, B4
+  tables -> D:\proj\submission\results\tables
+  macros -> D:\proj\submission\results\macros\condition_numbers.tex  (142 definitions)
+appended 112 macros -> D:\proj\submission\results\macros\condition_numbers.tex
+
+live: 46 wrong of 90 (resampled range 37-55)
+  retrieval       60.9%  [ 46.7,  74.5]  n=28
+  verification    39.1%  [ 25.5,  53.3]  n=18
+  aggregation      0.0%  [  0.0,   0.0]  n=0
+  unattributed     0.0%  [  0.0,   0.0]  n=0
+
+oracle: 35 wrong of 90 (resampled range 26-44)
+  retrieval        5.7%  [  0.0,  14.6]  n=2
+  verification    94.3%  [ 85.4, 100.0]  n=33
+  aggregation      0.0%  [  0.0,   0.0]  n=0
+  unattributed     0.0%  [  0.0,   0.0]  n=0
+
+B1 attribution possible: False (no per-passage audit recorded)
+
+wrote 17 macros -> D:\proj\submission\results\macros\attribution_numbers.tex
+wrote D:\proj\submission\results\figures\poster_accuracy.png  (n = 90 claims)
+  B0: single LLM         overall  42.2   decidable  24.6
+  B1: single-call RAG    overall  44.4   decidable  27.9
+  MAFCA                  overall  48.9   decidable  34.4
+
+$ python src/analysis/join_conditions.py --conditions D:\proj\submission\results\av250 --cache D:\proj\submission\cache\av250.jsonl --out D:\proj\submission\results\averitec_n90_v2.jsonl
+
+$ python src/analysis/results_report.py --results D:\proj\submission\results\averitec_n90_v2.jsonl --tag av
+
+$ python src/analysis/grounding_figures.py --results D:\proj\submission\results\averitec_n90_v2.jsonl --tag av --betas 0.0 1.0 2.0
+
+$ python src/analysis/ablation.py --results D:\proj\submission\results\averitec_n90_v2.jsonl --tag av --betas 0.0 1.0 2.0
+
+$ python src/analysis/summary_figures.py
+
+$ python src/analysis/paper_numbers.py --averitec D:\proj\submission\results\averitec_n90_v2.jsonl --out D:\proj\submission\results\macros\numbers.tex
+
+$ python src/analysis/condition_tables.py --dir D:\proj\submission\results\av250 --cache D:\proj\submission\cache\av250.jsonl --out-dir D:\proj\submission\results\tables --macros D:\proj\submission\results\macros\condition_numbers.tex
+
+$ python src/analysis/oracle_macros.py --live D:\proj\submission\results\av250 --oracle D:\proj\submission\results\av250_oracle --cache D:\proj\submission\cache\av250.jsonl --out D:\proj\submission\results\macros\condition_numbers.tex
+
+$ python src/analysis/attribution_ci.py --out D:\proj\submission\results\macros\attribution_numbers.tex
+
+$ python src/analysis/poster_figures.py
+
+All artefacts regenerated: 13 figure(s) -> D:\proj\submission\results\figures
+                           8 table(s)  -> D:\proj\submission\results\tables
+                           3 macro file(s) -> D:\proj\submission\results\macros
